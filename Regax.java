@@ -41,12 +41,27 @@ public class Regax {
 			lastName();
 		}
 	}
-
-      public static void main(String[] args) {
-		System.out.println("enter the user Firstname");
+	public static void email()
+	{
+		String email = user.next();
+		boolean email1= Pattern.matches("^[A-Za-z0-9-\\\\+]+(\\\\.[A-Za-z0-9-]+)*@\" + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$",email);
+		if(email1==true)
+		{
+			System.out.println(email1+" is valid email");
+		}
+		else
+		{ 
+			System.out.println("InValid !!!,,Please reenter valid email");
+			email(); 
+		}
+	}
+	public static void main(String[] args) {
+		System.out.println("enter the user first name");
 		firstName();
-		System.out.println("enter the user Last name");
+		System.out.println("enter the user last name");
 		lastName();
+		System.out.println("enter the user email id");
+		email();
     
 	}
 }
