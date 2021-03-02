@@ -22,8 +22,31 @@ public class Regax {
 
 	}
 
-	public static void main(String[] args) {
-		System.out.println("enter the user first name");
+	public static void lastName()
+	{
+		String lastName = user.next();
+		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,}$",lastNamee);
+	}
+	public static void lastName()
+	{
+		String lastName = user.next();
+		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,10}$",lastName);
+		if(name1==true)
+		{
+			System.out.println(lastName+" is valid firstname");
+		}
+		else
+		{ 
+			System.out.println("Please reenter valid user name");
+			lastName();
+		}
+	}
+
+      public static void main(String[] args) {
+		System.out.println("enter the user Firstname");
 		firstName();
+		System.out.println("enter the user Last name");
+		lastName();
+    
 	}
 }
