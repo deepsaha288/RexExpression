@@ -71,7 +71,9 @@ public class Regax {
 	public static void password() 
 	{
 		String pwd= user.next(); 
-		boolean passwords= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
+		
+		boolean passwords= Pattern.matches("(?=.?[A-Z]).{1,}(?=.?[a-z]).{7,}(?=.*?[0-9]).{1,}$",pwd);
+		
 
 		if(passwords==true)   
 		{  
