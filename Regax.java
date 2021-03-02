@@ -55,13 +55,30 @@ public class Regax {
 			email(); 
 		}
 	}
+
+        public static void phoneNumber() 
+        {
+		String phone = user.nextLine();
+		boolean result = Pattern.matches("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$", phone);
+		if (result == true)
+                {
+			System.out.println("You Have Enter Valid Mobile Number: " +phone);
+		}
+                else
+                {
+			System.out.println("Please Re-enter Mobile Number: ");
+			phoneNumber();
+		}
+	}
 	public static void main(String[] args) {
-		System.out.println("enter the user first name");
+		System.out.println("enter the user First name");
 		firstName();
 		System.out.println("enter the user last name");
 		lastName();
 		System.out.println("enter the user email id");
 		email();
+                System.out.println("enter the user phone-number ");
+	        phoneNumber();
     
 	}
 }
